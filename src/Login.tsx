@@ -1,17 +1,18 @@
-import { Box, TextField, Typography } from "@mui/material";
+import { Box, Button, Card, TextField, Typography } from "@mui/material";
 import React from "react";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
+
 export const Login: React.FC = () => {
 	return (
-		<Box
+        <Card
+            variant="elevation"
 			sx={{
-				backgroundColor: "skyblue",
 				margin: "1rem 1rem 1rem 1rem",
 				padding: "5rem 1rem 25rem 1rem",
 			}}
 		>
-			<AccountCircleIcon />
+			<AccountCircleIcon fontSize="large"/>
 			<Typography
 				sx={{
 					margin: "1rem 1rem 1rem 1rem",
@@ -47,7 +48,27 @@ export const Login: React.FC = () => {
 				>
 					Password
 				</TextField>
+
+				<Box
+					sx={{
+						display: "flex",
+						justifyContent: "flex-end", // Align buttons to the far right
+						gap: 2, // Optional: Add some spacing between buttons
+						margin: "1rem -37.5rem 1rem 1rem",
+					}}
+				>
+					<Button variant='outlined'>Clear</Button>
+					<Button
+						variant='contained'
+						sx={{
+							backgroundColor: "blue",
+							color: "white",
+						}}
+					>
+						Submit
+					</Button>
+				</Box>
 			</Box>
-		</Box>
+		</Card>
 	);
 };
