@@ -1,14 +1,3 @@
-// import { Box, Paper } from "@mui/material";
-// import React from "react";
-
-// export const Navbar: React.FC = () => {
-//     return (
-//         <Box>
-
-//         </Box>
-//     )
-// };
-
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -23,6 +12,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import { Link } from "react-router-dom";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -58,8 +48,6 @@ export const Navbar: React.FC = () => {
 					<Typography
 						variant='h6'
 						noWrap
-						component='a'
-						href='#app-bar-with-responsive-menu'
 						sx={{
 							mr: 2,
 							display: { xs: "none", md: "flex" },
@@ -70,7 +58,12 @@ export const Navbar: React.FC = () => {
 							textDecoration: "none",
 						}}
 					>
-						LOGO
+						<Link
+							to='/home'
+							style={{ color: "inherit", textDecoration: "none" }}
+						>
+							Home
+						</Link>
 					</Typography>
 
 					<Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -114,7 +107,6 @@ export const Navbar: React.FC = () => {
 						variant='h5'
 						noWrap
 						component='a'
-						href='#app-bar-with-responsive-menu'
 						sx={{
 							mr: 2,
 							display: { xs: "flex", md: "none" },
@@ -126,7 +118,12 @@ export const Navbar: React.FC = () => {
 							textDecoration: "none",
 						}}
 					>
-						LOGO
+						<Link
+							to='/profile'
+							style={{ color: "inherit", textDecoration: "none" }}
+						>
+							Profile
+						</Link>
 					</Typography>
 					<Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
 						{pages.map((page) => (

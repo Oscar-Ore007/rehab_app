@@ -1,12 +1,30 @@
-import { Box, Paper } from "@mui/material";
 import React from "react";
+import { Box, Card, CardContent, Typography, Paper } from "@mui/material";
 
 export const Profile: React.FC = () => {
 	return (
-		<Paper>
-			<div>
-				Hello World 
-			</div>
-		</Paper>
-	) 
+		<Box mt={4} mx={2} display='flex' justifyContent='center'>
+			<Paper elevation={3}>
+				<Card>
+					<CardContent>
+						<Typography variant='h5' component='div' gutterBottom>
+							
+						</Typography>
+						<Typography variant='body1' color='textSecondary'>
+							Welcome to your profile! Customize this page with your profile
+							information.
+						</Typography>
+						{/* Add your profile information or components here */}
+					</CardContent>
+				</Card>
+			</Paper>
+		</Box>
+	);
 };
+
+
+
+
+
+
+
