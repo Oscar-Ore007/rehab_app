@@ -46,16 +46,18 @@ export const Login: React.FC = () => {
 			sx={{
 				margin: "1rem 1rem 1rem 1rem",
 				padding: "5rem 1rem 25rem 1rem",
+				justifyContent: "center",
 			}}
 		>
-			<AccountCircleIcon fontSize='large' />
-			<Typography
+			<Box
 				sx={{
 					margin: "1rem 1rem 1rem 1rem",
+					textAlign: "center",
 				}}
 			>
-				Login Page
-			</Typography>
+				<AccountCircleIcon fontSize='large' />
+				<Typography>Login</Typography>
+			</Box>
 			<Box
 				sx={{
 					display: "flex",
@@ -98,10 +100,7 @@ export const Login: React.FC = () => {
 						margin: "1rem -37.5rem 1rem 1rem",
 					}}
 				>
-					<Button
-						variant='outlined'
-						onClick={handleClear}
-					>
+					<Button variant='outlined' onClick={handleClear}>
 						Clear
 					</Button>
 					<Button

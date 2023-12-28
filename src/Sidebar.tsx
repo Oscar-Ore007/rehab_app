@@ -14,7 +14,7 @@ import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 
 type Anchor = "left";
 
-export default function Sidebar() {
+export const Sidebar: React.FC  = () =>  {
 	const [state, setState] = React.useState({
 		left: false,
 	});
