@@ -13,7 +13,6 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 import { Link } from "react-router-dom";
 
-const pages = ["Exercises", "Doctor Notes", "Medication"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 export const Navbar: React.FC = () => {
@@ -64,6 +63,30 @@ export const Navbar: React.FC = () => {
 							Home
 						</Link>
 					</Typography>
+					<Button
+						component={Link}
+						to='/exercises'
+						color='inherit'
+						sx={{ my: 2, display: "block" }}
+					>
+						Exercises
+					</Button>
+					<Button
+						component={Link}
+						to='/exercises'
+						color='inherit'
+						sx={{ my: 2, display: "block" }}
+					>
+						Doctor Notes
+					</Button>
+					<Button
+						component={Link}
+						to='/exercises'
+						color='inherit'
+						sx={{ my: 2, display: "block" }}
+					>
+						Medication
+					</Button>
 
 					<Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
 						<IconButton
@@ -93,13 +116,7 @@ export const Navbar: React.FC = () => {
 							sx={{
 								display: { xs: "block", md: "none" },
 							}}
-						>
-							{pages.map((page) => (
-								<MenuItem key={page} onClick={handleCloseNavMenu}>
-									<Typography textAlign='center'>{page}</Typography>
-								</MenuItem>
-							))}
-						</Menu>
+						></Menu>
 					</Box>
 					{/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
 					<Typography
@@ -124,17 +141,7 @@ export const Navbar: React.FC = () => {
 							Profile
 						</Link>
 					</Typography>
-					<Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-						{pages.map((page) => (
-							<Button
-								key={page}
-								onClick={handleCloseNavMenu}
-								sx={{ my: 2, color: "white", display: "block" }}
-							>
-								{page}
-							</Button>
-						))}
-					</Box>
+					<Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}></Box>
 
 					<Box sx={{ flexGrow: 0 }}>
 						<Tooltip title='Open settings'>
