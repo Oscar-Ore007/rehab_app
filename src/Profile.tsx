@@ -5,8 +5,7 @@ import { Sidebar } from "./Sidebar";
 export const Profile: React.FC = () => {
 	return (
 		<Box mt={4} mx={2} display='flex' justifyContent='start'>
-			<Sidebar /> 
-			
+			<Sidebar />
 			<Paper elevation={3}>
 				<Card>
 					<CardContent>
