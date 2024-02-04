@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Box, Button, Card, TextField, Typography } from "@mui/material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { useNavigate } from "react-router-dom";
 
 export const Login: React.FC = () => {
+	const navigate = useNavigate();
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 	const [usernameError, setUsernameError] = useState(false);
@@ -10,27 +12,26 @@ export const Login: React.FC = () => {
 
 	const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setUsername(event.target.value);
-		setUsernameError(false); // Reset the error when the user types
+		setUsernameError(false);
 	};
 
 	const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setPassword(event.target.value);
-		setPasswordError(false); // Reset the error when the user types
+		setPasswordError(false);
 	};
 
 	const handleSubmit = () => {
-		// Perform validation using the logical AND operator
 		username.trim() === "" && setUsernameError(true);
 		password.trim() === "" && setPasswordError(true);
 
-		// Check if either username or password is empty, and return if true
 		if (username.trim() === "" || password.trim() === "") {
 			return;
 		}
 
-		// Your logic for handling the form submission
 		console.log("Username:", username);
 		console.log("Password:", password);
+
+		navigate("/home");
 	};
 
 	const handleClear = () => {

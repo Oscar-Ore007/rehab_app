@@ -4,6 +4,7 @@ import { Login } from "./Login";
 import { Profile } from "./Profile";
 import { Home } from "./Home";
 import { Exercises } from "./Exercises";
+import "./App.css";
 
 
 export const App: React.FC = () => {
