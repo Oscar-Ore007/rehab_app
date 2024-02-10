@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Card, CardContent, Typography, Paper } from "@mui/material";
-import { Sidebar } from "./Sidebar";
 
 export const Profile: React.FC = () => {
 	return (

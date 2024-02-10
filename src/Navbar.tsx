@@ -178,12 +178,12 @@
 // 	);
 //
 
-import React from "react";
+// import React from "react";
 
-export const Navbar: React.FC = () => {
-	return (
-		<div>
-			Hello 
-		</div>
-	);
-};
+// export const Navbar: React.FC = () => {
+// 	return (
+// 		<div>
+// 			Hello 
+// 		</div>
+// 	);
+// };
