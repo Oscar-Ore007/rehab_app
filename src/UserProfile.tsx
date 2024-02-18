@@ -13,7 +13,7 @@ import MailIcon from "@mui/icons-material/Mail";
 
 // type Anchor = "top" | "left" | "bottom" | "right";
 
-export const UserProfile: React.FC = () =>  {
+export const UserProfile: React.FC = () => {
 	const [state, setState] = React.useState({
 		top: false,
 		left: true,
@@ -72,9 +72,11 @@ export const UserProfile: React.FC = () =>  {
 
 	return (
 		<div>
-			{(["left", "right", "top", "bottom"] as const).map((anchor) => (
+			{([">>"] as const).map((anchor) => (
 				<React.Fragment key={anchor}>
-					<Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+					<Button sx={{ marginLeft: 0 }} onClick={toggleDrawer(anchor, true)}>
+						{anchor}
+					</Button>
 					<Drawer
 						anchor={anchor}
 						open={state[anchor]}
@@ -86,4 +88,4 @@ export const UserProfile: React.FC = () =>  {
 			))}
 		</div>
 	);
-}
+};

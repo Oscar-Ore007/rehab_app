@@ -10,7 +10,7 @@ export const Exercises: React.FC = () => {
 						width: "100%",
 						height: "100%",
 					}}
-				>
+				>k
 					<div>Hello World</div>
 				</Card>
 			</Paper>
